@@ -31,7 +31,7 @@ class _TweenBuilderPageState extends State<TweenBuilderPage> {
                         opacity: value,
                         child: Container(
                             height: 100,
-                            width: value == 1 ? 300 : value * 400,
+                            width: value == 1 ? 100 : value * 200,
                             child: FittedBox(child: child!)),
                       );
                     }),
@@ -42,11 +42,14 @@ class _TweenBuilderPageState extends State<TweenBuilderPage> {
             padding: const EdgeInsets.all(30.0),
             child: Hero(
               tag: "Tween",
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text("Go Back"),
+              child: Container(
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text("Go Back"),
+                ),
               ),
             ),
           ),

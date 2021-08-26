@@ -1,3 +1,4 @@
+import 'package:animation_test/screens/color_tween_page.dart';
 import 'package:animation_test/screens/tween_builder_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,16 +22,39 @@ class _HomeState extends State<Home> {
           children: [
             Hero(
               tag: "Tween",
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    CupertinoPageRoute(
-                      builder: (ctx) => TweenBuilderPage(),
-                    ),
-                  );
-                },
-                child: Text("Tween Builder Animation"),
+              child: Container(
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (ctx) => TweenBuilderPage(),
+                      ),
+                    );
+                  },
+                  child: Text("Tween Builder Animation"),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Hero(
+              tag: "TweenColors",
+              child: Container(
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (ctx) => ColorTweenPage(),
+                      ),
+                    );
+                  },
+                  child: Text("Tween Colors Animation"),
+                ),
               ),
             ),
           ],
