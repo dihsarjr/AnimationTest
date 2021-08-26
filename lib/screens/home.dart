@@ -1,3 +1,4 @@
+import 'package:animation_test/screens/animation_list.dart';
 import 'package:animation_test/screens/color_tween_page.dart';
 import 'package:animation_test/screens/tween_builder_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -55,6 +56,23 @@ class _HomeState extends State<Home> {
                   },
                   child: Text("Tween Colors Animation"),
                 ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (ctx) => AnimationList(),
+                    ),
+                  );
+                },
+                child: Text("Animation List"),
               ),
             ),
           ],
